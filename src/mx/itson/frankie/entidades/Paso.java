@@ -5,8 +5,8 @@
 package mx.itson.frankie.entidades;
 
 /**
- *
- * @author alumnog
+ * Se asigna y retorna el orden y descripción de los pasos
+ * 
  */
 public class Paso {
 

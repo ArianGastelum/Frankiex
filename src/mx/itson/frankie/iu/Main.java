@@ -9,12 +9,14 @@ import java.util.List;
 import mx.itson.frankie.entidades.Ingrediente;
 import mx.itson.frankie.entidades.Paso;
 import mx.itson.frankie.entidades.Receta;
+import mx.itson.frankie.entidades.Usuario;
 import mx.itson.frankie.enumeradores.Dificultad;
 
 /**
  *
  * @author alumnog
  */
+
 public class Main {
     
    public static void main (String[] args) {
@@ -80,24 +82,42 @@ public class Main {
        Paso pasos1 = new Paso();
        pasos1.setOrden(1);
        pasos1.setDescripcion("Horno precalentado a 180 °C");
+       pasos.add(pasos1);
        
        Paso pasos2 = new Paso();
        pasos2.setOrden(2);
        pasos2.setDescripcion("Mezcla la harina para brownies chocolate Fudge de Betty Crocker® con el agua, el aceite y los huevos. Vierte la mezcla en un molde cuadrado de 30 x 20 cm previamente en harinado y hornea a 180 °C durante 25 minutos. Retira del horno y enfría.");
+       pasos.add(pasos2);
        
        Paso pasos3 = new Paso();
        pasos3.setOrden(3);
        pasos3.setDescripcion("Bate el queso crema con la Leche Condensada LA LECHERA®, la ralladura de limón, la mantequilla y un poco de colorante hasta integrar por completo y refrigera por 20 minutos.");
+       pasos.add(pasos3);
        
        Paso pasos4 = new Paso();
        pasos4.setOrden(4);
        pasos4.setDescripcion("Desmolda y corta en cuadros. Unta los brownies con un poco de betún; dibuja el cabello y la boca con el chocolate fundido, coloca los ojos de azúcar y la nariz con las lunetas.");
+       pasos.add(pasos4);
        
        receta.setPasos(pasos);
        
        
        receta.setDificultad(Dificultad.FACIL);
        
+       Usuario usuario = new Usuario();
+       usuario.setNombre("Angel Arian");
+       usuario.setEmail("arian.030502@gmail.com");
+       usuario.setPassword("Frankie123");
+       
+       for(Ingrediente i : receta.getIngredientes()){
+           System.out.println(i.getNombre());
+       }
+       System.out.println("");
+       System.out.println("Pasos: ");
+       for(Paso p : receta.getPasos()){
+           System.out.println(p.getOrden() + "-" + p.getDescripcion());
+           
+       }
    }
     
 }

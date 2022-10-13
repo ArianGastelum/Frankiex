@@ -13,6 +13,8 @@ import mx.itson.frankie.enumeradores.Dificultad;
  */
 public class Receta {
 
+    
+
     private String nombre;
     private String descripción;
     private int numeroPorciones;
@@ -20,6 +22,22 @@ public class Receta {
     private List<Ingrediente> ingredientes;
     private List<Paso> pasos;
     private Dificultad dificultad;
+    private Usuario usuario;
+    
+    
+    /**
+     * @return the usuario
+     */
+    public Usuario getUsuario() {
+        return usuario;
+    }
+
+    /**
+     * @param usuario the usuario to set
+     */
+    public void setUsuario(Usuario usuario) {
+        this.usuario = usuario;
+    }
     
     /**
      * @return the nombre
